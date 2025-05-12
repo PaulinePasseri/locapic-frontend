@@ -31,7 +31,7 @@ export default function PlacesScreen() {
       return;
     }
 
-    fetch(`https://api-adresse.data.gouv.fr/search/?q=${city}`)
+    fetch(`https://api-adresse.data.gouv.fr/search/?q=${city}&type=municipality`)
       .then((response) => response.json())
       .then((data) => {
         const firstCity = data.features[0];
